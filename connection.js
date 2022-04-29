@@ -1,7 +1,12 @@
 const {MongoClient} = require('mongodb');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 async function main() {
-  const uri = "mongodb+srv://willhawkes:3e1venkinG5!@cluster0.hr3jb.mongodb.net/contacts_db?retryWrites=true&w=majority";
+  const uri = process.env.DB_URI;
+
+  console.log("URI variable " + uri);
 
   const client = new MongoClient(uri);
 
@@ -40,7 +45,7 @@ async function findListings(client) {
     console.log(`Found ${results.length} listing(s):`);
     results.forEach((result, i) => {
       console.log();
-      console.log(`${i + 1}. ${JSON.stringify(result)}`);
+      console.log(JSON.stringify(result));
     });
   }
 }
