@@ -1,12 +1,21 @@
-const express = require('express');
+const routes = require('express').Router();
 
-const contactsController = require('../controllers/contacts');
+routes.get('/', (req, res) => {
 
-const router = express.Router();
+  const dotenv = require('dotenv')
+  dotenv.config();
 
-//GET /feed/posts
+  const MongoClient = require('mongodb').MongoClient;
+  const uri = process.env.DB_URI;
+  MongoClient.connect(uri, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("contacts_db");
+    dbo.collection("contacts").find().toArray(function(err, result) {
+      if (err) throw err;
+      res.json(result);
+      db.close();
+    });
+  });
+});
 
-
-router.get('/', () => {contactsController.getData});
-// localhost:8080/contacts-/
-module.exports = router;
+module.exports = routes
