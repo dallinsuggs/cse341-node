@@ -1,9 +1,70 @@
 GET http://localhost:3000/contacts
 ###
 GET http://localhost:3000/contacts/62693b5ecbd926fef28bcbd2
-###
+
+
+###CREATE
+POST http://localhost:3000/contacts
+content-type: application/json
+
+{
+  "firstName":"Joe",
+  "lastName":"Shmoe",
+  "email":"joe@shmoe.com",
+  "favoriteColor":"shmurquoise",
+  "birthday":"03/17/68"
+}
+
+
+###UPDATE
+PUT http://localhost:3000/contacts/6273dfc99653df4908045fc1
+content-type: application/json
+
+{
+  "firstName":"Joe",
+  "lastName":"Shmoe",
+  "email":"joe1@shmoe.com",
+  "favoriteColor":"shmurple",
+  "birthday":"03/17/78"
+}
+
+###DELETE
+DELETE http://localhost:3000/contacts/6273dfc99653df4908045fc1
+
+
+
+###HEROKU______________________________________
 
 GET https://cse341-personal-w02.herokuapp.com/contacts
 ###
 GET https://cse341-personal-w02.herokuapp.com/contacts/62693b5ecbd926fef28bcbd2
+
+
+###CREATE
+POST https://cse341-personal-w02.herokuapp.com/contacts
+content-type: application/json
+
+{
+  "firstName":"Joe",
+  "lastName":"Shmoe",
+  "email":"joe@shmoe.com",
+  "favoriteColor":"shmurquoise",
+  "birthday":"03/17/68"
+}
+
+
+###UPDATE
+PUT https://cse341-personal-w02.herokuapp.com/contacts/6273dfc99653df4908045fc1
+content-type: application/json
+
+{
+  "firstName":"Joe",
+  "lastName":"Shmoe",
+  "email":"joe1@shmoe.com",
+  "favoriteColor":"shmurple",
+  "birthday":"03/17/78"
+}
+
+###DELETE
+DELETE https://cse341-personal-w02.herokuapp.com/contacts/6273dfc99653df4908045fc1
 ###
