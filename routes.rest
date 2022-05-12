@@ -17,7 +17,7 @@ content-type: application/json
 
 
 ###UPDATE
-PUT http://localhost:3000/contacts/6273dfc99653df4908045fc1
+PUT http://localhost:3000/contacts/627cfe71aaa5b617ef7f31b0
 content-type: application/json
 
 {
@@ -29,7 +29,7 @@ content-type: application/json
 }
 
 ###DELETE
-DELETE http://localhost:3000/contacts/6273dfc99653df4908045fc1
+DELETE http://localhost:3000/contacts/627cfe71aaa5b617ef7f31b0
 
 
 
@@ -54,7 +54,7 @@ content-type: application/json
 
 
 ###UPDATE
-PUT https://cse341-personal-w02.herokuapp.com/contacts/6273dfc99653df4908045fc1
+PUT https://cse341-personal-w02.herokuapp.com/contacts/6273e0e455cc56ece0a95298
 content-type: application/json
 
 {
@@ -66,5 +66,5 @@ content-type: application/json
 }
 
 ###DELETE
-DELETE https://cse341-personal-w02.herokuapp.com/contacts/6273dfc99653df4908045fc1
+DELETE https://cse341-personal-w02.herokuapp.com/contacts/6273e0e455cc56ece0a95298
 ###
