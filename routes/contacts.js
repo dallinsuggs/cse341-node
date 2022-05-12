@@ -30,7 +30,14 @@ routes.get('/:id', (req, res) => {
 routes.post('/', (req, res) => {
   console.log(req.body);
   // eslint-disable-next-line no-new-object
-  const newDoc = new Object(req.body);
+  // const newDoc = new Object(req.body);
+  const newDoc = new Object({
+    birthday: req.body.birthday,
+    email: req.body.email,
+    favoriteColor: req.body.favoriteColor,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+  });
   const result = connect.getCollection().insertOne(newDoc)
     // eslint-disable-next-line no-shadow
     .then(result => {
